@@ -1,0 +1,11 @@
+{% extends 'layout.html' %}
+{%block content%}
+<h3>Listagem de Artigos</h3>
+<ul>
+    {% for post in posts %}
+    <li>
+        <a href="{% url 'post_show' post.id %}">{{post.title}}</a>
+    </li>
+    {% endfor %}
+</ul>
+{%endblock%}
